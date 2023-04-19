@@ -15,6 +15,15 @@ public class TasksTest {
         Assertions.assertEquals(expected, actual);
     }
     @Test
+    public void EpicTestАFalse() {
+        String[] subtasks = {"Молоко", "Яйца", "Хлеб"};
+        Epic epic = new Epic(55, subtasks);
+
+        boolean expected = false;
+        boolean actual = epic.matches("Краб");
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
     public void SimpleTaskTest() {
         SimpleTask simpleTask = new SimpleTask(5, "Позвонить родителям");
 
